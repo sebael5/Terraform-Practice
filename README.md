@@ -1,1 +1,1 @@
-# Terraform-Practice
+Repo for practicing Terraform
