@@ -99,7 +99,7 @@ resource "aws_instance" "k8s_node" {
   ami                    = "ami-0c55b159cbfafe1f0"  # Cambia esto por una AMI válida (Ubuntu, Amazon Linux, etc.)
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.public_subnet.id
-  security_group         = aws_security_group.ec2_sg.id
+  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true
 
   tags = {
